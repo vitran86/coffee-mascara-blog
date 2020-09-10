@@ -395,10 +395,6 @@ footer {
   .main-pic__Lifestyle {
     grid-row: 3/4;
   }
-
-  section {
-    display: none;
-  }
 }
 
 @media screen and (min-width: 601px) and (max-width: 960px) {
@@ -472,6 +468,8 @@ footer {
   body::after {
     position: absolute;
     content: "";
+    width: 50%;
+    height: 100vh;
   }
 
   .title {
