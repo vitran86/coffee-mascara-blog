@@ -2,11 +2,12 @@
 
 main {
   display: grid;
-  grid-template-rows: 1fr repeat(4, 1fr);
+  grid-template-rows: auto repeat(4, 1fr);
   grid-gap: 10px;
 }
 
 .share-me {
+  display: block;
   grid-row: 1/2;
   font-size: 2em;
   text-align: center;
@@ -15,6 +16,7 @@ main {
 }
 
 .group-food {
+  display: block;
   grid-row: 2/3;
   display: grid;
   grid-gap: 3px;
@@ -114,6 +116,7 @@ main {
 }
 
 .group-travel {
+  display: block;
   grid-row: 3/4;
   display: grid;
   grid-gap: 3px;
@@ -213,6 +216,7 @@ main {
 }
 
 .group-lifestyle {
+  display: block;
   grid-row: 4/5;
   display: grid;
   grid-gap: 3px;
@@ -325,6 +329,10 @@ main {
   font-size: 1em;
   color: var(--background);
   box-shadow: -1px 5px 5px -5px black;
+}
+#comment-textarea {
+  width: 100%;
+  height: 100px;
 }
 .comment-field {
   grid-row: 2/3;
@@ -534,34 +542,8 @@ section .new-post {
   margin-left: 12px;
 }
 
-@media screen and (max-width: 600px) {
-  main {
-    display: grid;
-    grid-template-rows: 100px repeat(4, 1fr);
-    grid-gap: 10px;
-  }
-  .group-food {
-    grid-row: 2/3;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(6, 93px);
-    grid-template-rows: repeat(8, 50px);
-  }
-  .group-travel {
-    grid-row: 3/4;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(6, 93px);
-    grid-template-rows: repeat(8, 50px);
-  }
-  .group-lifestyle {
-    grid-row: 4/5;
-    display: grid;
-    grid-gap: 3px;
-    grid-template-columns: repeat(6, 93px);
-    grid-template-rows: repeat(8, 50px);
-  }
+@media screen and (min-width: 600px) {
 }
 
-@media screen and (min-width: 601px) and (max-width: 960px) {
+@media screen and (max-width: 601px) and (min-width: 960px) {
 }
