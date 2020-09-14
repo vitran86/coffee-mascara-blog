@@ -16,6 +16,7 @@ main .container {
   color: var(--background);
 }
 
+/****************card 1****************/
 .card-1 {
   grid-row: 2/3;
   display: grid;
@@ -95,6 +96,8 @@ main .container {
   grid-row: 3/4;
   text-align: center;
 }
+
+/****************card 2****************/
 
 .card-2__pic {
   grid-row: 3/4;
