@@ -1,9 +1,11 @@
 @import url(/static/css/common.css);
 
-main {
+main .container {
   display: grid;
   grid-template-rows: auto repeat(4, 1fr);
   grid-gap: 10px;
+  max-width: 80%;
+  margin: 0 auto;
 }
 
 .share-me {
@@ -325,15 +327,26 @@ main {
 }
 .comment-title {
   grid-row: 1/2;
+  text-align: center;
   text-transform: uppercase;
   font-size: 1em;
   color: var(--background);
-  box-shadow: -1px 5px 5px -5px black;
+  box-shadow: -1px 5px 3px -5px black;
 }
 #comment-textarea {
-  width: 100%;
+  width: 90%;
   height: 100px;
 }
+
+.comment__name-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment__email-box {
+  margin-bottom: 10px;
+}
+
 .comment-field {
   grid-row: 2/3;
   display: flex;
@@ -341,16 +354,6 @@ main {
   justify-content: space-around;
   align-items: flex-start;
   padding: 6px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.comment__post-btn button {
-  background: var(--background);
-  height: 35px;
-  border-radius: 5px;
-  border: none;
-  color: white;
 }
 
 .comment__post-btn:hover button {
@@ -370,6 +373,50 @@ a:hover {
   color: black;
 }
 
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.abtme {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+  color: var(--background);
+  position: relative;
+}
+
+.abtme::before {
+  position: absolute;
+  content: "";
+  border-top: 1px ridge var(--background);
+  width: 120px;
+  left: 100px;
+  top: 15px;
+}
+
+.abtme::after {
+  position: absolute;
+  content: "";
+  border-top: 1px ridge var(--background);
+  width: 120px;
+  right: 100px;
+  top: 15px;
+}
+
+.abtme-avatar img {
+  border-radius: 50%;
+}
+
+.abtme-caption {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 section .new-post {
   display: grid;
   grid-gap: 6px;
@@ -381,6 +428,8 @@ section .new-post {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-transform: uppercase;
   font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
   color: var(--background);
   box-shadow: -1px 5px 5px -5px black;
 }
@@ -542,8 +591,21 @@ section .new-post {
   margin-left: 12px;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
+  .group-food,
+  .group-travel,
+  .group-lifestyle {
+    grid-template-columns: repeat(6, minmax(75px, auto));
+    grid-template-rows: repeat(8, 50px);
+  }
+  .about-me div {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 601px) and (min-width: 960px) {
+@media screen and (min-width: 601px) and (max-width: 960px) {
+  main .container {
+    grid-column: 1/3;
+    max-width: 80%;
+  }
 }
