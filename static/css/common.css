@@ -230,6 +230,236 @@ footer {
   font-weight: 400;
 }
 
+label {
+  color: var(--background);
+  font-weight: bold;
+}
+a {
+  color: var(--background);
+}
+
+a:hover {
+  color: black;
+}
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.abtme {
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+  color: var(--background);
+  position: relative;
+}
+
+.abtme::before {
+  position: absolute;
+  content: "";
+  border-top: 1px ridge var(--background);
+  width: 120px;
+  left: 100px;
+  top: 15px;
+}
+
+.abtme::after {
+  position: absolute;
+  content: "";
+  border-top: 1px ridge var(--background);
+  width: 120px;
+  right: 100px;
+  top: 15px;
+}
+
+.abtme-avatar img {
+  border-radius: 50%;
+}
+
+.abtme-caption {
+  width: 80%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+section .new-post {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-rows: 1fr repeat(5, 5fr);
+}
+
+.new-post__title {
+  grid-row: 1/2;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 10px;
+  color: var(--background);
+  box-shadow: -1px 5px 5px -5px black;
+}
+
+.new-post__1 {
+  grid-row: 2/3;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: repeat (2, 1fr);
+}
+.new-post__1-pic {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background: url(/static/image/FRIED\ CHICKEN.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.new-post__1-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--background);
+  margin-left: 12px;
+}
+.new-post__1-time {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-left: 12px;
+}
+.new-post__2 {
+  grid-row: 3/4;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: repeat (2, 1fr);
+}
+.new-post__2-pic {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background: url(/static/image/Grill.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.new-post__2-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--background);
+  margin-left: 12px;
+}
+.new-post__2-time {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-left: 12px;
+}
+
+.new-post__3 {
+  grid-row: 4/5;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: repeat (2, 1fr);
+}
+.new-post__3-pic {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background: url(/static/image/NOODLE.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.new-post__3-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--background);
+  margin-left: 12px;
+}
+.new-post__3-time {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-left: 12px;
+}
+.new-post__4 {
+  grid-row: 5/6;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: repeat (2, 1fr);
+}
+.new-post__4-pic {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background: url(/static/image/SALAD.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.new-post__4-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--background);
+  margin-left: 12px;
+}
+.new-post__4-time {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-left: 12px;
+}
+
+.new-post__5 {
+  grid-row: 6/7;
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: 3fr 5fr;
+  grid-template-rows: repeat (2, 1fr);
+}
+.new-post__5-pic {
+  grid-column: 1/2;
+  grid-row: 1/3;
+  background: url(/static/image/SOUP.jpg);
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+}
+
+.new-post__5-title {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 1.2em;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--background);
+  margin-left: 12px;
+}
+.new-post__5-time {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  margin-left: 12px;
+}
+
 @media screen and (max-width: 600px) {
   header {
     display: flex;
