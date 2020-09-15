@@ -1,0 +1,160 @@
+@import url(/static/css/common.css);
+
+main .container {
+  max-width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.detail-blog-post__roll-cake {
+  grid-row: 1/2;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+}
+
+.roll-cake__header {
+  grid-row: 1/2;
+  text-align: center;
+}
+
+.roll-cake__pic1 {
+  grid-row: 2/3;
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+  background: url(/static/image/roll-cake.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.roll-cake__content {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+h3 {
+  font-size: medium;
+  color: var(--background);
+  font-weight: bold;
+}
+
+i,
+b {
+  color: var(--background);
+  font-size: 1.2em;
+}
+
+.roll-cake__content img {
+  border-radius: 15px;
+  align-self: center;
+}
+
+.roll-cake__content li {
+  padding: 6px;
+}
+
+/*************post header*************/
+.roll-cake__header {
+  display: grid;
+  grid-gap: 6px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, auto);
+}
+
+.roll-cake-title {
+  grid-row: 1/2;
+  grid-column: 1/4;
+}
+.roll-cake-title a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 3em;
+  text-align: center;
+  font-family: "Black Ops One", cursive;
+  color: var(--background);
+}
+
+.roll-cake-feature {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  width: 80%;
+  height: 25px;
+  background: var(--background);
+}
+
+.roll-cake-feature a {
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.125em;
+  color: white;
+}
+
+.roll-cake-author {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  font-size: 1.3em;
+}
+.roll-cake-date {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  font-size: 1.3em;
+}
+.media-link {
+  grid-row: 3/4;
+  grid-column: 3/4;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.media-link svg {
+  fill: var(--background);
+}
+
+/*************comment*************/
+.comment {
+  grid-row: 2/3;
+  display: grid;
+  grid-template-rows: 50px 5fr;
+}
+.comment-title {
+  grid-row: 1/2;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: var(--background);
+  box-shadow: -1px 5px 3px -5px black;
+}
+#comment-textarea {
+  width: 90%;
+  height: 100px;
+}
+
+.comment__name-box {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.comment__email-box {
+  margin-bottom: 10px;
+}
+
+.comment-field {
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 6px;
+}
+
+.comment__post-btn:hover button {
+  background: linear-gradient(300deg, yellow, var(--background));
+  color: black;
+}
