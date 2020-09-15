@@ -1,7 +1,7 @@
 @import url(/static/css/common.css);
 
 main .container {
-  max-width: 95%;
+  max-width: 90%;
   margin: 0 auto;
   display: grid;
   grid-template-rows: 1fr auto;
@@ -31,6 +31,7 @@ main .container {
 
 .roll-cake__content {
   grid-row: 3/4;
+  font-size: 1.125em;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -38,7 +39,7 @@ main .container {
 }
 
 h3 {
-  font-size: medium;
+  font-size: 1.4em;
   color: var(--background);
   font-weight: bold;
 }
@@ -50,7 +51,7 @@ b {
 }
 
 .roll-cake__content img {
-  border-radius: 15px;
+  border-radius: 70px;
   align-self: center;
 }
 
@@ -62,13 +63,13 @@ b {
 .roll-cake__header {
   display: grid;
   grid-gap: 6px;
-  grid-template-columns: repeat(3, auto);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
 }
 
 .roll-cake-title {
-  grid-row: 1/2;
-  grid-column: 1/4;
+  grid-row: 2/3;
+  grid-column: 1/3;
 }
 .roll-cake-title a {
   text-decoration: none;
@@ -80,9 +81,10 @@ b {
 }
 
 .roll-cake-feature {
-  grid-row: 2/3;
-  grid-column: 1/2;
-  width: 80%;
+  grid-row: 1/2;
+  grid-column: 1/3;
+  place-self: center;
+  width: 30%;
   height: 25px;
   background: var(--background);
 }
@@ -95,21 +97,26 @@ b {
 }
 
 .roll-cake-author {
-  grid-row: 2/3;
-  grid-column: 2/3;
+  grid-row: 3/4;
+  grid-column: 1/2;
   font-size: 1.3em;
+  place-self: end;
+  margin-right: 20px;
 }
 .roll-cake-date {
-  grid-row: 2/3;
-  grid-column: 3/4;
+  grid-row: 3/4;
+  grid-column: 2/3;
   font-size: 1.3em;
+  place-self: start;
+  margin-left: 20px;
 }
 .media-link {
-  grid-row: 3/4;
-  grid-column: 3/4;
+  grid-row: 4/5;
+  grid-column: 2/3;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-top: 20px;
   margin-bottom: 25px;
 }
 
@@ -157,4 +164,25 @@ b {
 .comment__post-btn:hover button {
   background: linear-gradient(300deg, yellow, var(--background));
   color: black;
+}
+
+@media screen and (min-width: 720px) and (max-width: 960px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 961px) and (max-width: 1024px) {
+  .container {
+    max-width: 90%;
+  }
+  .roll-cake__pic1 {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .roll-cake__pic1 {
+    width: 80%;
+    place-self: center;
+  }
 }
